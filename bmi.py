@@ -5,6 +5,8 @@ while True:
     if len(height) == 0:
         break                                   # Enterキーだけが押された場合は終了
     height = float(height)                      # 入力は文字列なので、小数に変換
+    if height > 3:                              # 数字が３以上ならセンチメートルで入力したと判断
+        height = height/100
     weight = float(raw_input('体重(kg)?:'))
     bmi = weight / pow(height, 2)               # 組み込み関数powで累乗を計算
 
